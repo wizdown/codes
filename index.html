@@ -1,10 +1,55 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>First Website</title>
+	<title>Deeplink Generator</title>
+	<script src="deeplinkGenerator.js" type="text/javascript"></script>
+	<script src="config.js" type="text/javascript"></script>
+	<script src="defaultValuesPopulator.js" type="text/javascript"></script>
 </head>
+
 <body>
-<h1> First post </h1>
-<p>Hello World!</p>
+
+	<style> 
+
+		div {
+			display:flex;
+			flex-direction: row;
+    		justify-content: center;
+    		align-items: center
+		}
+
+		#result {
+			word-break: break-all;
+			white-space: normal;
+    		width: 50%;
+    		text-align: center
+		}
+
+	</style>
+
+	<div>
+		<h1> DEEPLINK GENERATOR </h1>
+	</div>
+
+	<div >
+		<p style="margin: 16px">Base Url: </p>
+		<textarea id="baseUrlTextArea" rows="1" cols="100">Base Url Value</textarea>
+	</div>
+
+	<div>
+		<p style="margin: 16px">Json Value: </p>
+		<textarea id="jsonObjectTextArea" rows="5" cols="100"> jsonParam Value</textarea>
+	</div>
+
+	<div>
+		<button type="button" onclick="generateLink()">Generate</button>
+	</div>
+
+	<div>
+		<p id="result">Enter Params and hit generate to get required URL</p>
+	</div>
+
 </body>
+
 </html>
